@@ -1,0 +1,25 @@
+<div class="side-menu" [ngClass]="{'collapsed': !isExpanded }">
+    <nav>
+        <a>
+            <span id="toggle-btn" (click)="toggleSideMenu()">
+                <fa-icon [icon]="navIcon" class="side-menu-icon"></fa-icon>
+                <span *ngIf="isExpanded" class="icon-label" >Menu</span>
+            </span>
+        </a>
+
+        <a>
+            <span>
+                <fa-icon [icon]="contentManagementIcon" class="side-menu-icon"></fa-icon>
+                <span *ngIf="isExpanded" class="icon-label">Content Management</span>
+            <fa-icon *ngIf="isExpanded" [icon]="angleDownIcon" class="angle-down"></fa-icon>
+            </span>
+        </a>
+
+        <a>
+            <span>
+                <fa-icon [icon]="coursesIcon" class="side-menu-icon"></fa-icon>
+                <span *ngIf="isExpanded" class="icon-label">Courses</span>
+            </span>
+        </a>
+    </nav>
+</div>

@@ -1,0 +1,38 @@
+<div class="books-details ">
+
+    <div>
+        <h1>Books</h1>
+        <button type="button" class="btn btn-primary create-book-btn">Create New Book</button>
+    </div>
+
+    <div class="form-group search-bar clear col-12 col-md-6">
+        <fa-icon [icon]="searchIcon" class="search-icon"></fa-icon>
+        <input type="text" #search class="form-control search-field" placeholder="Search"
+            (keyup)="searchBooks(search.value)">
+    </div>
+
+    <h4>All Books</h4>
+
+    <div *ngIf="!noBookFound; else noBookFoundSection" class="books-lisiting">
+        <div class="container">
+            <div class="row">
+                <ng-container *ngFor="let book of booksList">
+                    <app-book-card class="col-12 col-md-6" [bookInfo]="book"></app-book-card>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noBookFoundSection>
+        <div class="alert alert-danger" role="alert">
+            No books found!
+        </div>
+    </ng-template>
+
+    <div *ngIf="errorState">
+        <div class="alert alert-danger" role="alert">
+            Something went wrong!
+        </div>
+    </div>
+
+</div>

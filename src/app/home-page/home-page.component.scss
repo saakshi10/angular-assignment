@@ -1,0 +1,15 @@
+.home-page{
+    position: absolute;
+    top: 0;
+    left: 315px;
+    width: calc(100% - 315px);
+    min-height: 100%;
+    transition: ease 0.5s;
+    background-color: #80808014;
+
+    &.collapsed-sidebar{
+        left: 60px ;
+        width: calc(100% - 60px);
+    }
+
+}

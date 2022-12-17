@@ -1,0 +1,40 @@
+.side-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 2px solid #8080806b;
+    background-color: white;
+    width: 315px;
+
+    transition: ease 0.5s;
+    overflow-x: hidden;
+    padding: 20px;
+    white-space: nowrap;
+
+    &.collapsed{
+        width: 60px;
+    }
+
+    nav{
+        a{
+            display: block;
+            font-size: 18px;
+            padding: 10px 0px;
+            color: #2125298f;
+
+            .side-menu-icon{
+                padding-right: 20px;
+            }
+
+            .angle-down{
+                padding: 0px 10px;
+            }
+
+            .icon-label{
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}
